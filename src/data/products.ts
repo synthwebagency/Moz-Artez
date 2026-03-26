@@ -31,7 +31,7 @@ export const PRODUCTS: Product[] = [
     name: 'Recycled Wood Dining Table',
     category: 'Tables',
     description: 'Solid wood table made from reclaimed timber.',
-    price: 18000,
+    price: 17000,
     image: '/images/recycled-wood-dining-table.jpg',
   },
   {
