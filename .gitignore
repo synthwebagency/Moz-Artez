@@ -6,3 +6,17 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Exclude images from being shared to GitHub
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.webp
+*.ico
+*.avif
+*.bmp
+
+# Exclude images directory
+public/images/
