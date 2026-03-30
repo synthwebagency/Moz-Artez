@@ -18,5 +18,6 @@ coverage/
 *.avif
 *.bmp
 
-# Exclude images directory
-public/images/
+# Exclude images directory contents but keep the folder
+public/images/*
+!public/images/.gitkeep
