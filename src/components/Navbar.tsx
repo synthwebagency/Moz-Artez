@@ -2,6 +2,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { useState } from 'react';
 import { clsx } from 'clsx';
+import { CATEGORIES } from '../data/products';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,10 +12,6 @@ export default function Navbar() {
     { name: 'About', path: '/about' },
     { name: 'How It\'s Made', path: '/how-its-made' },
     { name: 'Contact', path: '/contact' },
-  ];
-
-  const categories = [
-    'Gates', 'Tables', 'Rocks', 'Shelves', 'Chairs', 'Decorations'
   ];
 
   return (
@@ -49,7 +46,7 @@ export default function Navbar() {
                 Products
               </button>
               <div className="absolute top-full right-0 mt-2 w-48 bg-primary border border-border-custom shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
-                {categories.map((cat) => (
+                {CATEGORIES.map((cat) => (
                   <Link
                     key={cat}
                     to={`/products/${cat.toLowerCase()}`}
@@ -89,7 +86,7 @@ export default function Navbar() {
           ))}
           <div className="pt-4 pb-2 border-t border-white/10">
             <p className="px-3 text-xs font-semibold text-white/50 uppercase tracking-wider">Categories</p>
-            {categories.map((cat) => (
+            {CATEGORIES.map((cat) => (
               <Link
                 key={cat}
                 to={`/products/${cat.toLowerCase()}`}

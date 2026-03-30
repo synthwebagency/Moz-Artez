@@ -1,9 +1,10 @@
 import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { CATEGORIES } from '../data/products';
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-300 pt-16 pb-8">
+    <footer className="bg-primary text-slate-300 pt-16 pb-8 border-t border-border-custom">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="space-y-4">
@@ -29,10 +30,13 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-6">Categories</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/products/gates" className="hover:text-primary transition-colors">Gates</Link></li>
-              <li><Link to="/products/tables" className="hover:text-primary transition-colors">Tables</Link></li>
-              <li><Link to="/products/chairs" className="hover:text-primary transition-colors">Chairs</Link></li>
-              <li><Link to="/products/decorations" className="hover:text-primary transition-colors">Decorations</Link></li>
+              {CATEGORIES.map((cat) => (
+                <li key={cat}>
+                  <Link to={`/products/${cat.toLowerCase()}`} className="hover:text-primary transition-colors">
+                    {cat}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -60,7 +64,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Moz-artez. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary transition-colors"><Facebook size={20} /></a>
+            <a href="https://www.facebook.com/share/1DKWABTgMJ/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Facebook size={20} /></a>
           </div>
         </div>
       </div>

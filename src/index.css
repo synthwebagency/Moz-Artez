@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #006064; /* Deep Teal Background */
+  --color-primary: #000435; /* Deep Navy Background */
   --color-secondary: #4B6B0E; /* Olive Green Accent */
-  --color-border-custom: #1A2B3C; /* Dark Navy Border */
+  --color-border-custom: rgba(255, 255, 255, 0.15); /* Sleek White Border */
   --color-accent: #ffffff; /* White */
   
   --font-display: "Playfair Display", serif;

@@ -11,7 +11,7 @@ export default function HowItsMade() {
   return (
     <div className="pb-24">
       {/* Header */}
-      <section className="bg-slate-900 text-white py-32 relative overflow-hidden">
+      <section className="bg-primary text-white py-32 relative overflow-hidden border-b border-border-custom">
         <div className="absolute top-0 left-0 w-full h-full opacity-20">
           <img
             src="/images/workshop-craftsmanship.jpg"

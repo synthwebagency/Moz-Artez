@@ -61,7 +61,7 @@ export default function Contact() {
             <div className="pt-12 border-t border-border-custom flex flex-col items-center">
               <h4 className="font-bold text-white mb-6">Follow Our Journey</h4>
               <div className="flex gap-4">
-                <a href="#" className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-white hover:bg-secondary transition-all border border-border-custom">
+                <a href="https://www.facebook.com/share/1DKWABTgMJ/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-white hover:bg-secondary transition-all border border-border-custom">
                   <Facebook size={24} />
                 </a>
               </div>

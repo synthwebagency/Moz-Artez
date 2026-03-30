@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Leaf, Hammer, ShieldCheck, Zap } from 'lucide-react';
 import { PRODUCTS, CATEGORIES } from '../data/products';
+import { clsx } from 'clsx';
 
 export default function Home() {
   const featuredProducts = PRODUCTS.slice(0, 4);
@@ -82,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* Categories Section */}
-      <section className="bg-border-custom/30 py-24 border-y border-border-custom">
+      <section className="bg-primary/50 py-24 border-y border-border-custom">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl font-bold text-white">Explore Our Categories</h2>
@@ -125,7 +126,10 @@ export default function Home() {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className={clsx(
+                    "w-full h-full transition-transform duration-500 group-hover:scale-110",
+                    ['Decorations', 'Lights', 'Domestic food grinding machines'].includes(product.category) ? "object-contain p-4" : "object-cover"
+                  )}
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-4 left-4">
@@ -152,7 +156,7 @@ export default function Home() {
 
       {/* Value Preview Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-slate-900 rounded-[3rem] p-12 md:p-24 text-white overflow-hidden relative">
+        <div className="bg-primary rounded-[3rem] p-12 md:p-24 text-white overflow-hidden relative border border-border-custom">
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 blur-[120px] rounded-full -mr-48 -mt-48" />
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
